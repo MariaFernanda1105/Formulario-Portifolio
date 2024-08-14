@@ -19,13 +19,13 @@ document.addEventListener("DOMContentLoaded", function() {
             fr.onload = function(e) {
                 localStorage.setItem('imagem-form', e.target.result);
                 // Redireciona após carregar a imagem
-                window.location.href = "index.html";
+                window.location.href = "portifolio.html";
             };
             
             fr.readAsDataURL(imagemInput.files[0]);
         } else {
             // Redireciona imediatamente se nenhuma imagem for selecionada
-            window.location.href = "index.html";
+            window.location.href = "portifolio.html";
         }
     });
 });
