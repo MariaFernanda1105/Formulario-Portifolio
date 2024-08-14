@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+    </header>
+
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <!-- Título dinâmico -->
+            <h1 class="apresentacao__conteudo__titulo" id="titulo"></h1>
+            <!-- Descrição dinâmica -->
+            <p class="apresentacao__conteudo__texto" id="desc"></p>
+            <div class="apresentacao__links">
+                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes</h2>
+                <a class="apresentacao__links__link" href="https://github.com/MariaFernanda1105">
+                    <img src="./Imagens/github.png"> Github
+                </a>
+                <a class="apresentacao__links__link" href="https://www.linkedin.com/in/maria-fernanda-gomes-oliveira-189984264/">
+                    <img src="./Imagens/linkedin.png"> Linkedin
+                </a>
+                <a class="apresentacao__links__link" href="https://www.twitch.tv/miniichib">
+                    <img src="./Imagens/twitch.png"> Twitch
+                </a>
+            </div>
+        </section>
+        <!-- Imagem dinâmica -->
+        <img id="imagem-from" src="" alt="Imagem do formulário" width="350">
+    </main>
+
+    <footer class="rodape">
+        <p>Desenvolvido por Alura.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Recuperando os valores do localStorage
+            var titulo = localStorage.getItem('titulo');
+            var desc = localStorage.getItem('desc');
+            var imagemSrc = localStorage.getItem('imagem-form');
+
+            // Exibindo os valores na página
+            document.getElementById('titulo').textContent = titulo;
+            document.getElementById('desc').textContent = desc;
+            document.getElementById('imagem-from').src = imagemSrc;
+        });
+    </script>
+</body>
+
+</html>
