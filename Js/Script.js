@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 localStorage.setItem('imagem-form', e.target.result);
                 // Redireciona após carregar a imagem
                 window.location.href = "index.html";
-                window.location.href = "sobremim.html";
             };
             
             fr.readAsDataURL(imagemInput.files[0]);
